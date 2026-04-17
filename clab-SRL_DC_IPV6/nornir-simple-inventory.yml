@@ -1,0 +1,31 @@
+---
+h1-100:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.7
+h1-101:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+l1:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.2
+l2:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.3
+s1:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.5
+s2:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.6

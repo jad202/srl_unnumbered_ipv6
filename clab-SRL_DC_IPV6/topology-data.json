@@ -1,0 +1,329 @@
+{
+  "name": "SRL_DC_IPV6",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-2a20642b8f18",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKB7qkZv2ArHb8yROjbyR6vl+xX0HvP5+563mQ7Ism+5"],
+  "nodes": {
+    "h1-100": {
+      "index": "0",
+      "shortname": "h1-100",
+      "longname": "h1-100",
+      "fqdn": "h1-100.SRL_DC_IPV6.io",
+      "group": "",
+      "labdir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/h1-100",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2a20642b8f18",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/h1-100",
+        "clab-node-longname": "h1-100",
+        "clab-node-name": "h1-100",
+        "clab-node-type": "linux",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/srl-ipv6/srl_ipv6.yaml",
+        "containerlab": "SRL_DC_IPV6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h1-101": {
+      "index": "1",
+      "shortname": "h1-101",
+      "longname": "h1-101",
+      "fqdn": "h1-101.SRL_DC_IPV6.io",
+      "group": "",
+      "labdir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/h1-101",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2a20642b8f18",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/h1-101",
+        "clab-node-longname": "h1-101",
+        "clab-node-name": "h1-101",
+        "clab-node-type": "linux",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/srl-ipv6/srl_ipv6.yaml",
+        "containerlab": "SRL_DC_IPV6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "l1": {
+      "index": "2",
+      "shortname": "l1",
+      "longname": "l1",
+      "fqdn": "l1.SRL_DC_IPV6.io",
+      "group": "",
+      "labdir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/l1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:25.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:dd:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2a20642b8f18",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/l1",
+        "clab-node-longname": "l1",
+        "clab-node-name": "l1",
+        "clab-node-type": "ixr-d3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/srl-ipv6/srl_ipv6.yaml",
+        "containerlab": "SRL_DC_IPV6"
+      },
+      "port-bindings": [
+      ]
+    },
+    "l2": {
+      "index": "3",
+      "shortname": "l2",
+      "longname": "l2",
+      "fqdn": "l2.SRL_DC_IPV6.io",
+      "group": "",
+      "labdir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/l2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:25.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:7c:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2a20642b8f18",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/l2",
+        "clab-node-longname": "l2",
+        "clab-node-name": "l2",
+        "clab-node-type": "ixr-d3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/srl-ipv6/srl_ipv6.yaml",
+        "containerlab": "SRL_DC_IPV6"
+      },
+      "port-bindings": [
+      ]
+    },
+    "s1": {
+      "index": "4",
+      "shortname": "s1",
+      "longname": "s1",
+      "fqdn": "s1.SRL_DC_IPV6.io",
+      "group": "",
+      "labdir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/s1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:25.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:a2:04:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2a20642b8f18",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/s1",
+        "clab-node-longname": "s1",
+        "clab-node-name": "s1",
+        "clab-node-type": "ixr-d3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/srl-ipv6/srl_ipv6.yaml",
+        "containerlab": "SRL_DC_IPV6"
+      },
+      "port-bindings": [
+      ]
+    },
+    "s2": {
+      "index": "5",
+      "shortname": "s2",
+      "longname": "s2",
+      "fqdn": "s2.SRL_DC_IPV6.io",
+      "group": "",
+      "labdir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/s2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:25.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:97:05:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-2a20642b8f18",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/srl-ipv6/clab-SRL_DC_IPV6/s2",
+        "clab-node-longname": "s2",
+        "clab-node-name": "s2",
+        "clab-node-type": "ixr-d3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/srl-ipv6/srl_ipv6.yaml",
+        "containerlab": "SRL_DC_IPV6"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:23:91:be",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:69:73:68",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:5c:aa:7a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:0e:ff:e0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:8e:fb:58",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l1",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:d9:c8:27",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:ad:f6:5f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l2",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:9f:aa:25",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l1",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:a4:6f:8c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h1-100",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:46:28:e4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l2",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:c7:ef:7a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h1-101",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:01:d2:4b",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

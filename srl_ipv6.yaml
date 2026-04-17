@@ -1,0 +1,45 @@
+name: SRL_DC_IPV6
+prefix: ""
+topology:
+  kinds:
+    srl:
+      image: ghcr.io/nokia/srlinux:25.7.2
+      type: ixr-d3l
+    linux:
+      type: linux
+      image: ghcr.io/hellt/network-multitool
+  nodes:
+    s1:
+      kind: srl
+    s2:
+      kind: srl
+    l1:
+      kind: srl
+    l2:
+      kind: srl
+    h1-100:
+     kind: linux
+     exec:
+       - ip link set dev eth1 address 00:00:00:01:00:01
+       - ip link add link eth1 name eth1.100 type vlan id 100
+       - ip link set dev eth1.100 address 00:00:00:01:00:01
+       - ip addr add 192.168.100.1/24 dev eth1.100
+       - ip link set dev eth1.100 up
+    h1-101:
+     kind: linux
+     exec:
+       - ip link set dev eth1 address 00:00:00:01:01:02
+       - ip link add link eth1 name eth1.100 type vlan id 100
+       - ip link set dev eth1.100 address 00:00:00:01:01:02
+       - ip addr add 192.168.102/24 dev eth1.100
+       - ip link set dev eth1.100 up
+
+  links:
+  - endpoints: ["s1:e1-1", "l1:e1-1"]
+  - endpoints: ["s1:e1-2", "l2:e1-1"]
+
+  - endpoints: ["s2:e1-1", "l1:e1-2"]
+  - endpoints: ["s2:e1-2", "l2:e1-2"]
+
+  - endpoints: ["l1:e1-5", "h1-100:eth1"]
+  - endpoints: ["l2:e1-5", "h1-101:eth1"]
