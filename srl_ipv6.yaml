@@ -17,6 +17,10 @@ topology:
       kind: srl
     l2:
       kind: srl
+    l3:
+      kind: srl
+    l4:
+      kind: srl
     h1-100:
      kind: linux
      exec:
@@ -31,8 +35,12 @@ topology:
        - ip link set dev eth1 address 00:00:00:01:01:02
        - ip link add link eth1 name eth1.100 type vlan id 100
        - ip link set dev eth1.100 address 00:00:00:01:01:02
-       - ip addr add 192.168.102/24 dev eth1.100
+       - ip addr add 192.168.100.2/24 dev eth1.100
        - ip link set dev eth1.100 up
+    h12:
+     kind: linux
+    h2:
+     kind: linux
 
   links:
   - endpoints: ["s1:e1-1", "l1:e1-1"]
@@ -41,5 +49,17 @@ topology:
   - endpoints: ["s2:e1-1", "l1:e1-2"]
   - endpoints: ["s2:e1-2", "l2:e1-2"]
 
+
+  - endpoints: ["s1:e1-3", "l3:e1-1"]
+  - endpoints: ["s2:e1-3", "l3:e1-2"]
+
+
+  - endpoints: ["s1:e1-4", "l4:e1-1"]
+  - endpoints: ["s2:e1-4", "l4:e1-2"]
+
   - endpoints: ["l1:e1-5", "h1-100:eth1"]
   - endpoints: ["l2:e1-5", "h1-101:eth1"]
+
+  - endpoints: ["l1:e1-10", "h12:eth1"]
+  - endpoints: ["l2:e1-10", "h12:eth2"]
+  - endpoints: ["l3:e1-10", "h2:eth1"]
