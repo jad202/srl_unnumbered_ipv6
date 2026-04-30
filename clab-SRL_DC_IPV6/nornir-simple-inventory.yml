@@ -3,27 +3,47 @@ h1-100:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.9
+    hostname: 172.20.20.8
 h1-101:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.10
+    hostname: 172.20.20.6
+h102:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
 h12:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.6
+    hostname: 172.20.20.9
 h2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.5
+    hostname: 172.20.20.2
+h202:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.14
+h302:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.10
+h402:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.7
 l1:
     username: admin
     password: NokiaSrl1!
     platform: srl
-    hostname: 172.20.20.2
+    hostname: 172.20.20.5
 l2:
     username: admin
     password: NokiaSrl1!
@@ -33,19 +53,19 @@ l3:
     username: admin
     password: NokiaSrl1!
     platform: srl
-    hostname: 172.20.20.11
+    hostname: 172.20.20.12
 l4:
     username: admin
     password: NokiaSrl1!
     platform: srl
-    hostname: 172.20.20.3
+    hostname: 172.20.20.13
 s1:
     username: admin
     password: NokiaSrl1!
     platform: srl
-    hostname: 172.20.20.8
+    hostname: 172.20.20.11
 s2:
     username: admin
     password: NokiaSrl1!
     platform: srl
-    hostname: 172.20.20.7
+    hostname: 172.20.20.15

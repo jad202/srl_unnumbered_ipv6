@@ -41,6 +41,14 @@ topology:
      kind: linux
     h2:
      kind: linux
+    h102:
+     kind: linux
+    h202:
+     kind: linux
+    h302:
+     kind: linux
+    h402:
+     kind: linux
 
   links:
   - endpoints: ["s1:e1-1", "l1:e1-1"]
@@ -63,3 +71,8 @@ topology:
   - endpoints: ["l1:e1-10", "h12:eth1"]
   - endpoints: ["l2:e1-10", "h12:eth2"]
   - endpoints: ["l3:e1-10", "h2:eth1"]
+    
+  - endpoints: ["l1:e1-11", "h102:eth1"]
+  - endpoints: ["l2:e1-11", "h202:eth1"]
+  - endpoints: ["l3:e1-11", "h302:eth1"]
+  - endpoints: ["l4:e1-11", "h402:eth1"]
