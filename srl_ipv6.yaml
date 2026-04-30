@@ -43,8 +43,20 @@ topology:
      kind: linux
     h102:
      kind: linux
+     exec: 
+       - ip link add link eth1 name eth1.200 type vlan id 200
+       - ip link set add 00:00:00:02:00:01 dev eth1.200
+       - ip addr add 192.168.200.1/24 dev eth1.200
+       - ip link set up dev eth1.200
+       - ip route add 192.168.201.0/24 via 192.168.200.1 dev eth1.200
     h202:
      kind: linux
+     exec: 
+       - ip link add link eth1 name eth1.201 type vlan id 200
+       - ip link set add 00:00:00:02:01:02 dev eth1.201
+       - ip addr add 192.168.201.2/24 dev eth1.200
+       - ip link set up dev eth1.201
+       - ip route add 192.168.200.0/24 via 192.168.201.2 dev eth1.201
     h302:
      kind: linux
     h402:
